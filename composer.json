@@ -1,0 +1,19 @@
+{
+    "name": "mgf/kirby-imageresizeonupload",
+    "description": "Convert images on upload.",
+    "type": "plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Zehetner",
+            "email": "mail@christianzehetner.at"
+        }
+    ],
+    "autoload": {
+      "files": [
+          "config.php"
+      ],
+      "psr-4": {
+      }
+    }
+}
