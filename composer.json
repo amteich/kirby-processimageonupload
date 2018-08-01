@@ -1,6 +1,7 @@
 {
     "name": "mgf-werbeagentur/kirby-processimageonupload",
     "description": "Convert images on upload.",
+    "version": "1.0.0",
     "type": "plugin",
     "license": "MIT",
     "authors": [
