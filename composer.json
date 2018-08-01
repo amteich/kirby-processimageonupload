@@ -1,5 +1,5 @@
 {
-    "name": "mgf-werbeagentur/kirby-imageresizeonupload",
+    "name": "mgf-werbeagentur/kirby-processimageonupload",
     "description": "Convert images on upload.",
     "type": "plugin",
     "license": "MIT",
