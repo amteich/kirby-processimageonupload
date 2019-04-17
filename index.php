@@ -14,7 +14,7 @@ Kirby::plugin('mgfagency/processimageonupload', [
   'hooks' => [
     'file.create:after' => function ($file) {
       if($file->isResizable()) {
-        $darkroom = Darkroom::factory(option('thumbs.driver') ?? 'gd', option('mgf.processimageonupload.convert'));
+        $darkroom = Darkroom::factory(option('thumbs.driver') ?? 'gd', option('mgfagency.processimageonupload.convert'));
         $darkroom->process($file->root());
       }
     },
