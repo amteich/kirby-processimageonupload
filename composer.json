@@ -1,20 +1,16 @@
 {
-    "name": "mgf-werbeagentur/kirby-processimageonupload",
-    "description": "Convert images on upload.",
-    "version": "1.0.0",
-    "type": "plugin",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Christian Zehetner",
-            "email": "christian@mgf.at"
-        }
-    ],
-    "autoload": {
-      "files": [
-          "config.php"
-      ],
-      "psr-4": {
-      }
+  "name": "mgfagency/kirby-processimageonupload",
+  "description": "Convert images on upload.",
+  "type": "kirby-plugin",
+  "version": "1.0.0-beta.1",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christian Zehetner",
+      "email": "christian@mgf.at"
     }
+  ],
+  "require": {
+    "getkirby/composer-installer": "^1.1"
+  }
 }

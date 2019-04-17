@@ -1,3 +1,25 @@
 <?php 
 
-require_once __DIR__ . '/vendor/autoload.php';
+namespace mgfagency\processimageonupload;
+
+use Kirby;
+use \Kirby\Image\Darkroom;
+
+Kirby::plugin('mgfagency/processimageonupload', [
+  'options' => [
+    'convert' => [
+      'width' => 1280,
+    ],
+  ],
+  'hooks' => [
+    'file.create:after' => function ($file) {
+      if($file->isResizable()) {
+        $darkroom = Darkroom::factory(option('thumbs.driver') ?? 'gd', option('mgf.processimageonupload.convert'));
+        $darkroom->process($file->root());
+      }
+    },
+    'file.replace:after' => function ($newFile, $oldFile) {
+      kirby()->trigger('file.create:after', $newFile);
+    }
+  ]
+]);
